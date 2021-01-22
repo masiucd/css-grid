@@ -1,0 +1,21 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr auto 2fr;
+  grid-template-rows: 100px 200px 244px;
+  grid-gap: 20px;
+}
+
+.item {
+  padding: 1rem;
+  background: var(--yellow);
+  font-size: 3.5rem;
+  display: grid;
+  align-items: center;
+  border-radius: 3px;
+  justify-content: center;
+}
+
+.item1 {
+  grid-column: 1/4;
+  grid-row: 1/3;
+}
