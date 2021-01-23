@@ -34,6 +34,40 @@
           #5ffbf1
         );
         min-height: 100vh;
+        display: flex;
+        align-items: center;
+      }
+      h1 {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .folders {
+        display: flex;
+        flex-flow: row wrap;
+        max-width: 900px;
+        margin: 0 auto;
+        justify-content: space-evenly;
+        width: 100%;
+        @media (min-width: 768px) {
+          width: 80%;
+        }
+      }
+
+      .folder {
+        background: #fefefe;
+        border-radius: 4px;
+        width: 5rem;
+        text-align: center;
+        margin: 1rem;
+      }
+
+      .folder a {
+        color: #333;
+        text-decoration: none;
+        font-size: 1.2rem;
       }
     </style>
   </head>
@@ -47,7 +81,17 @@
       </div>
       <div class="folder">
         <a href="./102/index.html">
-          <p>101</p>
+          <p>102</p>
+        </a>
+      </div>
+      <div class="folder">
+        <a href="./103/index.html">
+          <p>103</p>
+        </a>
+      </div>
+      <div class="folder">
+        <a href="./form/index.html">
+          <p>form</p>
         </a>
       </div>
     </main>
