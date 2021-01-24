@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 12rem;
+  min-height: 100vh;
+  grid-gap: 20px;
+}
+
+header {
+  grid-column: span 4;
+  background-color: var(--yellow);
+}
+
+aside,
+main {
+  grid-column: span 2;
+  padding: 10rem;
+  border: 2px solid var(--dark2);
+}
+
+footer {
+  grid-column: span 4;
+  background-color: var(--yellow);
+}
+
+@media (max-width: 768px) {
+  body {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  aside {
+    grid-column: span 3;
+  }
+  main {
+    grid-column: span 3;
+  }
+}

@@ -9,6 +9,7 @@
 - [Layout](#layout)
   - [grid-auto-flow](#grid-auto-flow)
   - [size-grid-items](#size-grid-items)
+- [Grid Auto Fit, Grid Auto Fill ](#fit)
 
 ## About <a name = "about"></a>
 
@@ -46,3 +47,29 @@ We could also use the `span` keyword like:
 `grid-column: span 2` which means: `hey item I want you to take up 2 columns from where you are right now`.
 
 <br/>
+
+## Grid Auto Fit, Grid Auto Fill <a name = "fit"></a
+
+`auto-fill` and `auto-fit` will help us to fill out the grid.
+
+`auto-fill` fills the row with as many columns it can fit.
+
+for example:
+
+```css
+grid-template-columns: repeat(auto-fill, 150px);
+```
+
+you don't tell it how many columns you want, just check how many possible items you can fit in there.
+
+while `auto-fit` fills the current available columns into the space expending them so that they take up any available space.
+You not for example layout the first item at the end with `auto-fit` just because the grid will end where there is no more items in the grid.
+
+But both `auto-fit` and `auto-fill` comes more handy when using the `minmax` function.
+
+```css
+grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+```
+
+If you are used to work with `Flex-box` it works similar to `flex-wrap`.
