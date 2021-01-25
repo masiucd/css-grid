@@ -1,0 +1,31 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 200px 1fr;
+  grid-template-rows: repeat(4, 320px);
+  grid-gap: 10px;
+  min-height: 100vh;
+  grid-template-areas:
+    "nav nav nav"
+    "A  A  A"
+    "B B B"
+    "footer footer footer";
+}
+
+.item {
+  font-size: 1rem;
+}
+
+nav {
+  grid-area: nav;
+}
+
+.sec-1 {
+  grid-area: A;
+}
+.sec-2 {
+  grid-area: B;
+}
+
+footer {
+  grid-area: footer;
+}
