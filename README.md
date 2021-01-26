@@ -10,6 +10,7 @@
   - [grid-auto-flow](#grid-auto-flow)
   - [size-grid-items](#size-grid-items)
 - [Grid Auto Fit, Grid Auto Fill ](#fit)
+- [Naming lines ](#naming-lines)
 
 ## About <a name = "about"></a>
 
@@ -73,3 +74,28 @@ grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 ```
 
 If you are used to work with `Flex-box` it works similar to `flex-wrap`.
+
+<br />
+
+## Naming Lines <a name = "naming-lines"></a>
+
+We can name our lines as well simply by using square brackets like this:
+
+```css
+grid-template-columns: [site-left] 1fr [content-start] 500px [content-end] 1fr [site-right];
+```
+
+and same goes for rows:
+
+```css
+grid-template-rows: [content-top] repeat(5, auto) [content-bottom];
+```
+
+So with this we can span our grid items on to the named lines.
+
+```css
+.item-12 {
+  grid-column: content-start;
+  grid-row: content-top / content-bottom;
+}
+```
