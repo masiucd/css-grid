@@ -10,6 +10,7 @@
   - [grid-auto-flow](#grid-auto-flow)
   - [size-grid-items](#size-grid-items)
 - [Grid Auto Fit, Grid Auto Fill ](#fit)
+- [Grid template areas](#grid-template-areas)
 - [Naming lines ](#naming-lines)
 
 ## About <a name = "about"></a>
@@ -77,6 +78,38 @@ If you are used to work with `Flex-box` it works similar to `flex-wrap`.
 
 <br />
 
+## Grid template Areas <a name ="grid-template-areas"></a>
+
+With Grid template areas we can name our grid space and make it possible to use cells in the grid and assigning them names.
+
+```css
+.grid {
+  grid-template-columns: 200px 1fr 300px 1fr;
+  grid-gap: 20px;
+
+  grid-template-areas:
+    "a a a b"
+    "c c c c"
+    "d d e e"
+    "f g h h";
+}
+
+.item-1 {
+  grid-area: a;
+}
+
+.item-3 {
+  grid-area: c;
+}
+
+.item-11 {
+  grid-area: h;
+}
+```
+
+<img src="grid-area.png"/>
+
+<br/>
 ## Naming Lines <a name = "naming-lines"></a>
 
 We can name our lines as well simply by using square brackets like this:
@@ -99,3 +132,5 @@ So with this we can span our grid items on to the named lines.
   grid-row: content-top / content-bottom;
 }
 ```
+
+<br/>
