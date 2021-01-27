@@ -1,22 +1,17 @@
 .grid {
-  grid-template-columns: 200px 1fr 300px 1fr;
+  grid-template-columns: repeat(10, 1fr);
   grid-gap: 20px;
-
-  grid-template-areas:
-    "a a a b"
-    "c c c c"
-    "d d e e"
-    "f g h h";
+  grid-auto-flow: dense;
 }
 
-.item-1 {
-  grid-area: a;
+.item:nth-child(4n) {
+  background-color: darkmagenta;
+  color: #fefefe;
+  grid-column: span 4;
 }
 
-.item-3 {
-  grid-area: c;
-}
-
-.item-11 {
-  grid-area: h;
+.item:nth-child(8n) {
+  background-color: #2196f3;
+  grid-column: span 7;
+  grid-row: span 3;
 }

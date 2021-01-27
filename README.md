@@ -133,4 +133,31 @@ So with this we can span our grid items on to the named lines.
 }
 ```
 
+## Fill the grid <a name="fill-the-grid"></a>
+
+Sometime when you looking for a specific grid with a specific look you will notice that the grid will not be completely filled.
+With `grid-auto-flow: dense` we can fill in those empty spots.
+
+```css
+.grid {
+  grid-template-columns: repeat(10, 1fr);
+  grid-gap: 20px;
+  grid-auto-flow: dense;
+}
+
+.item:nth-child(4n) {
+  background-color: darkmagenta;
+  color: #fefefe;
+  grid-column: span 4;
+}
+
+.item:nth-child(8n) {
+  background-color: #2196f3;
+  grid-column: span 7;
+  grid-row: span 3;
+}
+```
+
+<img src="dense.png"/>
+
 <br/>
